@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  payment_type: MyString
   package_id: 
-  received: false
+  courier_id: 
+  admin_id: 
+  status: false
 
 two:
-  payment_type: MyString
   package_id: 
-  received: false
+  courier_id: 
+  admin_id: 
+  status: false

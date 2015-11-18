@@ -1,0 +1,5 @@
+<%=@courier.name%><br><br>
+<%=@courier.address%><br><br>
+<%=@courier.phone%><br>
+<%= link_to "edit courier details", edit_courier_path %><br>
+<%= link_to "delete courier details",@courier, method: :delete, data:{confirm: 'Are you sure?'} %>

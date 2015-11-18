@@ -1,0 +1,1299 @@
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 10:47:45 +0000
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.2ms)
+  [1m[36m (136.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (99.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151115191512)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "phone" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151115191512"]]
+  [1m[35m (101.5ms)[0m  commit transaction
+Migrating to CreatePackages (20151115191639)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "packages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tracking_code" varchar, "weight_kg" integer, "user_id" integer, "vendor" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_packages_on_user_id" ON "packages" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115191639"]]
+  [1m[36m (106.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20151115205813)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205813"]]
+  [1m[36m (130.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCouriers (20151115205954)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "couriers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205954"]]
+  [1m[36m (130.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePaymentInfos (20151115211329)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "payment_infos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "payment_type" varchar, "package_id" integer, "received" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_payment_infos_on_package_id" ON "payment_infos" ("package_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151115211329"]]
+  [1m[35m (107.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_payment_infos_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_payment_infos_on_package_id' AND type='index'
+[0m
+
+
+Started GET "/users" for 127.0.0.1 at 2015-11-16 10:50:18 +0000
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 10:50:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CouriersController#index as HTML
+  Rendered couriers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1762ms (Views: 1716.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 10:50:41 +0000
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 10:50:47 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.3ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 55ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Courier with 'id'=1):
+  app/controllers/couriers_controller.rb:47:in `find_courier'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.9ms)
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 10:51:05 +0000
+Processing by CouriersController#index as HTML
+  Rendered couriers/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 70ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:01:29 +0000
+Processing by CouriersController#index as HTML
+  Rendered couriers/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/index.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/couriers/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/couriers/index.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.0ms)
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:01:46 +0000
+Processing by CouriersController#index as HTML
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT "couriers".* FROM "couriers"[0m
+  Rendered couriers/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:01:47 +0000
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:01:48 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+Processing by CouriersController#index as HTML
+  [1m[35mCourier Load (0.2ms)[0m  SELECT "couriers".* FROM "couriers"
+  Rendered couriers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:18 +0000
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+Processing by CouriersController#index as HTML
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT "couriers".* FROM "couriers"[0m
+  Rendered couriers/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:20 +0000
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:02:34 +0000
+Processing by CouriersController#index as HTML
+  [1m[35mCourier Load (0.2ms)[0m  SELECT "couriers".* FROM "couriers"
+  Rendered couriers/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:02:35 +0000
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:02:38 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:05:09 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: This is courier new page
+    2: 
+    3: <%= form_for @user do |t|%>
+    4: <%= t.text_field :name%>
+    5: <%= t.text_field :adress%>
+    6: <%= t.text_field :phone%>
+  app/views/couriers/new.html.erb:3:in `_app_views_couriers_new_html_erb__935364558809847119_69830552188120'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.2ms)
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:05:20 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (107.7ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `adress' for #<Courier:0x007f055256c008>):
+    2: 
+    3: <%= form_for @courier do |t|%>
+    4: <%= t.text_field :name%>
+    5: <%= t.text_field :adress%>
+    6: <%= t.text_field :phone%>
+    7: <% end %>
+  app/views/couriers/new.html.erb:5:in `block in _app_views_couriers_new_html_erb__935364558809847119_69830416487160'
+  app/views/couriers/new.html.erb:3:in `_app_views_couriers_new_html_erb__935364558809847119_69830416487160'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.6ms)
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:05:29 +0000
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:08:12 +0000
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:12:11 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `tsubmitd' for #<ActionView::Helpers::FormBuilder:0x007f0551beb150>):
+    4: <%= t.text_field :name, placeholder: 'name'%><br>
+    5: <%= t.text_field :address, placeholder: 'address'%><br>
+    6: <%= t.text_field :phone, placeholder: 'phone'%><br>
+    7: <%= t.tsubmitd 'create'%><br>
+    8: 
+    9: <% end %>
+  app/views/couriers/new.html.erb:7:in `block in _app_views_couriers_new_html_erb__935364558809847119_69830412611400'
+  app/views/couriers/new.html.erb:3:in `_app_views_couriers_new_html_erb__935364558809847119_69830412611400'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.7ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.0ms)
+
+
+Started GET "/couriers/new" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+Processing by CouriersController#new as HTML
+  Rendered couriers/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 69ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:13:40 +0000
+
+
+Started POST "/couriers" for 127.0.0.1 at 2015-11-16 11:13:52 +0000
+Processing by CouriersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEXU+WFXktKXyPM8Hl9VI6M0jRdS9+wQJZHo48k/Eeo2rHlnvLaOFVuy5x2Orl2kqAaOADor91rhYOkJc4A6kA==", "courier"=>{"name"=>"fghfs", "address"=>"ywgfdwg", "phone"=>"hgwghd"}, "commit"=>"create"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "couriers" ("name", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "fghfs"], ["address", "ywgfdwg"], ["phone", "hgwghd"], ["created_at", "2015-11-16 11:13:52.995641"], ["updated_at", "2015-11-16 11:13:52.995641"]]
+  [1m[36m (248.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/couriers/1
+Completed 302 Found in 253ms (ActiveRecord: 249.4ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 11:13:53 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:34 +0000
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 11:17:49 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:17:49 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:17:49 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:50 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:50 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:50 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:50 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:17:50 +0000
+
+
+Started POST "/couriers" for 127.0.0.1 at 2015-11-16 11:19:11 +0000
+Processing by CouriersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEXU+WFXktKXyPM8Hl9VI6M0jRdS9+wQJZHo48k/Eeo2rHlnvLaOFVuy5x2Orl2kqAaOADor91rhYOkJc4A6kA==", "courier"=>{"name"=>"Ben", "address"=>"East Legon", "phone"=>"0243463579"}, "commit"=>"create"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "couriers" ("name", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ben"], ["address", "East Legon"], ["phone", "0243463579"], ["created_at", "2015-11-16 11:19:11.351907"], ["updated_at", "2015-11-16 11:19:11.351907"]]
+  [1m[36m (221.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/couriers/2
+Completed 302 Found in 227ms (ActiveRecord: 221.9ms)
+
+
+Started GET "/couriers/2" for 127.0.0.1 at 2015-11-16 11:19:11 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered couriers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/couriers" for 127.0.0.1 at 2015-11-16 11:19:41 +0000
+Processing by CouriersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEXU+WFXktKXyPM8Hl9VI6M0jRdS9+wQJZHo48k/Eeo2rHlnvLaOFVuy5x2Orl2kqAaOADor91rhYOkJc4A6kA==", "courier"=>{"name"=>"Nyawira", "address"=>"Kenya", "phone"=>"05 something"}, "commit"=>"create"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "couriers" ("name", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Nyawira"], ["address", "Kenya"], ["phone", "05 something"], ["created_at", "2015-11-16 11:19:41.332585"], ["updated_at", "2015-11-16 11:19:41.332585"]]
+  [1m[36m (201.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/couriers/3
+Completed 302 Found in 206ms (ActiveRecord: 202.5ms)
+
+
+Started GET "/couriers/3" for 127.0.0.1 at 2015-11-16 11:19:41 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered couriers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 11:21:37 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/couriers" for 127.0.0.1 at 2015-11-16 11:22:13 +0000
+Processing by CouriersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEXU+WFXktKXyPM8Hl9VI6M0jRdS9+wQJZHo48k/Eeo2rHlnvLaOFVuy5x2Orl2kqAaOADor91rhYOkJc4A6kA==", "courier"=>{"name"=>"Chidi", "address"=>"NIGERIA", "phone"=>"05 something too"}, "commit"=>"create"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "couriers" ("name", "address", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chidi"], ["address", "NIGERIA"], ["phone", "05 something too"], ["created_at", "2015-11-16 11:22:13.284631"], ["updated_at", "2015-11-16 11:22:13.284631"]]
+  [1m[35m (244.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/couriers/4
+Completed 302 Found in 251ms (ActiveRecord: 244.8ms)
+
+
+Started GET "/couriers/4" for 127.0.0.1 at 2015-11-16 11:22:13 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered couriers/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:22:20 +0000
+Processing by CouriersController#index as HTML
+  [1m[35mCourier Load (0.2ms)[0m  SELECT "couriers".* FROM "couriers"
+  Rendered couriers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/couriers" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+Processing by CouriersController#index as HTML
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT "couriers".* FROM "couriers"[0m
+  Rendered couriers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 11:22:45 +0000
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 13:28:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.3ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 239ms (Views: 210.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:28:02 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:28:04 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/edit.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/couriers/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/couriers/edit.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.1ms)
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:28:04 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/edit.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/couriers/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/couriers/edit.html.erb:10: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.8ms)
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:29:44 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: This is edit page 
+    2: 
+    3: <%= form_for @user do |f|%>
+    4: <%= f.text_field :name %>
+    5: <%= f.text_field :address %>
+    6: <%= f.text_field :phone %>
+  app/views/couriers/edit.html.erb:3:in `_app_views_couriers_edit_html_erb__1689220337405782893_70018562503460'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.7ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.7ms)
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:03 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:30:37 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:08 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:42 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (173.4ms)
+Completed 200 OK in 212ms (Views: 210.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:31:59 +0000
+
+
+Started PATCH "/couriers/1" for 127.0.0.1 at 2015-11-16 13:32:12 +0000
+Processing by CouriersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tpyA1/LPT8nsC8MIjdGxXgC1KtXJfoS6r3GEYFX/eB0M9+dgioh+OvKOy2yxk5CczDXvD/54VguTMf7O+jWmg==", "courier"=>{"name"=>"Henry", "address"=>"Ghana", "phone"=>"0234567435"}, "commit"=>"Update Courier", "id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/couriers_controller.rb:25:in `update'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.3ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.3ms)
+
+
+Started PATCH "/couriers/1" for 127.0.0.1 at 2015-11-16 13:32:37 +0000
+Processing by CouriersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tpyA1/LPT8nsC8MIjdGxXgC1KtXJfoS6r3GEYFX/eB0M9+dgioh+OvKOy2yxk5CczDXvD/54VguTMf7O+jWmg==", "courier"=>{"name"=>"Henry", "address"=>"Ghana", "phone"=>"0234567435"}, "commit"=>"Update Courier", "id"=>"1"}
+  [1m[35mCourier Load (0.2ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/couriers_controller.rb:26:in `update'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.0ms)
+
+
+Started PATCH "/couriers/1" for 127.0.0.1 at 2015-11-16 13:33:09 +0000
+Processing by CouriersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tpyA1/LPT8nsC8MIjdGxXgC1KtXJfoS6r3GEYFX/eB0M9+dgioh+OvKOy2yxk5CczDXvD/54VguTMf7O+jWmg==", "courier"=>{"name"=>"Henry", "address"=>"Ghana", "phone"=>"0234567435"}, "commit"=>"Update Courier", "id"=>"1"}
+  [1m[36mCourier Load (0.3ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms)
+
+NameError (undefined local variable or method `corier_param' for #<CouriersController:0x007f5cdea2d8d8>):
+  app/controllers/couriers_controller.rb:26:in `update'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (47.3ms)
+
+
+Started PATCH "/couriers/1" for 127.0.0.1 at 2015-11-16 13:33:17 +0000
+Processing by CouriersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tpyA1/LPT8nsC8MIjdGxXgC1KtXJfoS6r3GEYFX/eB0M9+dgioh+OvKOy2yxk5CczDXvD/54VguTMf7O+jWmg==", "courier"=>{"name"=>"Henry", "address"=>"Ghana", "phone"=>"0234567435"}, "commit"=>"Update Courier", "id"=>"1"}
+  [1m[35mCourier Load (0.3ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "couriers" SET "name" = ?, "address" = ?, "phone" = ?, "updated_at" = ? WHERE "couriers"."id" = ?  [["name", "Henry"], ["address", "Ghana"], ["phone", "0234567435"], ["updated_at", "2015-11-16 13:33:17.927375"], ["id", 1]]
+  [1m[36m (102.4ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 104.4ms)
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/couriers_controller.rb:27:in `update'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (22.3ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.9ms)
+
+
+Started PATCH "/couriers/1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+Processing by CouriersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tpyA1/LPT8nsC8MIjdGxXgC1KtXJfoS6r3GEYFX/eB0M9+dgioh+OvKOy2yxk5CczDXvD/54VguTMf7O+jWmg==", "courier"=>{"name"=>"Henry", "address"=>"Ghana", "phone"=>"0234567435"}, "commit"=>"Update Courier", "id"=>"1"}
+  [1m[35mCourier Load (0.2ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/couriers/1
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:33:32 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:33:39 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.2ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/couriers/1" for 127.0.0.1 at 2015-11-16 13:33:41 +0000
+Processing by CouriersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BJIZtNs3Fe4229HF4S+XPvyIU6+L5AzyzBxsYnxpjHuie7QqBtYJKfqhxeRx3p+597pQuOM4F7gI7W2IxtanAQ==", "courier"=>{"name"=>"Henry", "address"=>"Ghana", "phone"=>"0234567435"}, "commit"=>"Update Courier", "id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/couriers/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 13:33:41 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 13:36:55 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.2ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/megyewodi/ruby-rails/railscode/PickApp/app/views/couriers/show.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+... details", method: :delete data:{confirm: 'Are you sure?'} )...
+...                               ^):
+  app/views/couriers/show.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.4ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/megyewodi/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (48.7ms)
+
+
+Started GET "/couriers/1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:37:08 +0000
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:37:10 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 95ms (Views: 91.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:37:27 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:37:31 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:37:33 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:37:34 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:37:37 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:37:39 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[36mCourier Load (0.1ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/couriers/1?data%5Bconfirm%5D=Are+you+sure%3F&method=delete" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+Processing by CouriersController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"delete", "id"=>"1"}
+  [1m[35mCourier Load (0.1ms)[0m  SELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered couriers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/couriers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/assets/couriers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-16 13:39:09 +0000
+
+
+Started GET "/couriers/1/edit" for 127.0.0.1 at 2015-11-16 13:46:57 +0000
+Processing by CouriersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourier Load (0.3ms)[0m  [1mSELECT  "couriers".* FROM "couriers" WHERE "couriers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered couriers/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 40.0ms | ActiveRecord: 1.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePaymentInfos (20151115211329)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (24.3ms)[0m  DROP TABLE "payment_infos"
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20151115211329"]]
+  [1m[35m (122.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCouriers (20151115205954)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "couriers"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20151115205954"]]
+  [1m[35m (115.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAdmins (20151115205813)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "admins"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20151115205813"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePackages (20151115191639)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "packages"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20151115191639"]]
+  [1m[35m (98.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151115191512)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20151115191512"]]
+  [1m[35m (153.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

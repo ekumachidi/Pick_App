@@ -1,0 +1,9 @@
+This is courier new page
+
+<%= form_for @courier do |t|%>
+<%= t.text_field :name, placeholder: 'name'%><br>
+<%= t.text_field :address, placeholder: 'address'%><br>
+<%= t.text_field :phone, placeholder: 'phone'%><br>
+<%= t.submit 'create'%><br>
+
+<% end %>
