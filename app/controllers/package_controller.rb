@@ -3,7 +3,10 @@ class PackageController < ApplicationController
 
   def index
   	@packages = Package.all
+<<<<<<< HEAD
   	@user = User.find[params(:id])
+=======
+>>>>>>> origin/master
   end
 
   def new
@@ -12,7 +15,10 @@ class PackageController < ApplicationController
 
   def create
   	@package = Package.new(package_param)
+<<<<<<< HEAD
   	@package.user_id = User.find(params[:id])
+=======
+>>>>>>> origin/master
   	if @package.save
   		redirect_to @package
   	else
