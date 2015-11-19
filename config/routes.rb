@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   # get 'package/index'
 
   # get 'package/new'
@@ -6,6 +7,15 @@ Rails.application.routes.draw do
   # get 'package/edit'
 
   # get 'package/show'
+=======
+  get 'package/index'
+
+  get 'package/new'
+
+  get 'package/edit'
+
+  get 'package/show'
+>>>>>>> origin/master
 
   resources :couriers
   resources :packages
