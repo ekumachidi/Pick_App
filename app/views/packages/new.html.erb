@@ -1,0 +1,9 @@
+<h1>Add new package</h1>
+<%= form_for(:packages, url: {action: :create}) do |t| %>
+<%= t.text_field :tracking_code, placeholder: 'tracking code'%><br>
+<%= t.text_field :weight_kg, placeholder: 'weight'%><br>
+<%= t.text_field :vendor, placeholder: 'vendor'%><br>
+<%= t.text_field :location, placeholder: 'location'%> <br>
+<%= t.submit 'create'%><br>
+
+<% end %>

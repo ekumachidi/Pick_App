@@ -1,0 +1,7 @@
+<h1>Package#show</h1>
+<%= t.tracking_code %> <br> 
+<%= t.weight%> <br>
+<%= t.vendor%> <br>
+<%= t.location%> <br>
+<%= link_to "edit Package details", edit_courier_path %><br>
+<%= link_to "delete Package details",@package, method: :delete, data:{confirm: 'Are you sure?'} %>

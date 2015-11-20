@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  # get 'package/index'
+
+  # get 'package/new'
+
+  # get 'package/edit'
+
+  # get 'package/show'
+  resources :users do
+    resources :packages
+  end
   resources :couriers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
