@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151118104203) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20151118104203) do
+=======
+ActiveRecord::Schema.define(version: 20151118111520) do
+>>>>>>> origin/master
+>>>>>>> origin/master
 
   create_table "admins", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +28,25 @@ ActiveRecord::Schema.define(version: 20151118104203) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  create_table "assignments", force: :cascade do |t|
+    t.integer  "package_id"
+    t.integer  "courier_id"
+    t.integer  "admin_id"
+    t.boolean  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "assignments", ["admin_id"], name: "index_assignments_on_admin_id"
+  add_index "assignments", ["courier_id"], name: "index_assignments_on_courier_id"
+  add_index "assignments", ["package_id"], name: "index_assignments_on_package_id"
+
+>>>>>>> origin/master
+>>>>>>> origin/master
   create_table "couriers", force: :cascade do |t|
     t.string   "name"
     t.string   "location"

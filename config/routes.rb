@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
   # get 'package/index'
 
   # get 'package/new'
@@ -6,10 +16,34 @@ Rails.application.routes.draw do
   # get 'package/edit'
 
   # get 'package/show'
+<<<<<<< HEAD
   resources :users do
     resources :packages
   end
+=======
+<<<<<<< HEAD
+  resources :users do
+    resources :packages
+  end
+=======
+<<<<<<< HEAD
+  resources :users
+=======
+=======
+  get 'package/index'
+
+  get 'package/new'
+
+  get 'package/edit'
+
+  get 'package/show'
+>>>>>>> origin/master
+
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
   resources :couriers
+  resources :packages
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
