@@ -20,5 +20,13 @@
 >>>>>>> origin/master
 </p>
 
+<p><%= button_to "add package",new_package_path%></p>
+
+<p> <%@user.packages.each do |package|%></p>
+    <%= package.trackin_code %><br>
+    <%= package.weight_kg %><br>
+    <%= package.trackin_code %><br>
+    <%= package.vendor %>  @ <%= package.location %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

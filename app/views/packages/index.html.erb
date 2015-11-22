@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<br><br>
 <h1>Packages index</h1>
 <% @packages.each do |t| %><br>
 <%= t.tracking_code %>
@@ -5,4 +12,9 @@
 <%= t.vendor%>
 <%= t.location%>
 <% end %> <br>
-<%= link_to 'create new package', new_user_package_path(@user)%>
+<%= link_to 'create new package', new_package_path%>
+
+
+<%= button_to ("Assign"), new_assignment_path(package_id: p)%>
+</body>
+</html>

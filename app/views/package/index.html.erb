@@ -1,8 +1,0 @@
-<h1>Packages index</h1>
-<% @packages.each do |t| %><br>
-<%= t.tracking_code %>
-<%= t.weight%>
-<%= t.vendor%>
-<%= t.location%>
-<% end %> <br>
-<%= link_to 'create new package', new_package_path%>

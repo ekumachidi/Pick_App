@@ -1,11 +1,23 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
->>>>>>> origin/master
+
+  get 'admins/index'
+
+  get 'admins/new'
+
+  get 'admins/show'
+
+  get 'admins/update'
+
+  get 'admins/destroy'
+
+  get 'admins/create'
+
+  get 'assignments/index'
+
+  get 'assignments/create'
+
+  get 'assignments/new'
+
   # get 'package/index'
 
   # get 'package/new'
@@ -13,15 +25,14 @@ Rails.application.routes.draw do
   # get 'package/edit'
 
   # get 'package/show'
-<<<<<<< HEAD
-  resources :users do
+ resources :users do
     resources :packages
   end
-=======
-<<<<<<< HEAD
+
+
+  resources :admins
   resources :users
-=======
-=======
+
   get 'package/index'
 
   get 'package/new'
@@ -29,10 +40,8 @@ Rails.application.routes.draw do
   get 'package/edit'
 
   get 'package/show'
->>>>>>> origin/master
 
->>>>>>> origin/master
->>>>>>> origin/master
+  resources :assignments
   resources :couriers
   resources :packages
   # The priority is based upon order of creation: first created -> highest priority.

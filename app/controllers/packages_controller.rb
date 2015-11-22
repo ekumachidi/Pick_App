@@ -3,23 +3,23 @@ class PackagesController < ApplicationController
 
   def index
   	@packages = Package.all
-  	@user = User.find(params[:user_id])
+  	
   end
 
   def new
-  	@user = User.find(params[:user_id])
-  	# @package = Package.new
+  @user = User.find(params[:user_id])
+  	#@package = Package.new
   end
 
   def create
   	@package = Package.new(package_param)
   	# @package.user_id = User.find(params[:id])
-  	@package.user_id = params[:user_id]
+  	#@package.user_id = params[:user_id]
   	if @package.save
   		# redirect_to @package
-  		redirect_to user_packages_path(@package.user_id)
+  		redirect_to packages_path #(@package.user_id)
   	else
-  		redirect_to new_user_package_path(@package.user_id)
+  		redirect_to new_package_path #(@package.user_id)
   	end
   end
 
