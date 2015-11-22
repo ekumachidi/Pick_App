@@ -1361,6 +1361,9 @@ Migrations are pending. To resolve this issue, run:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 >>>>>>> origin/master
 >>>>>>> origin/master
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -1770,6 +1773,9 @@ ActionController::RoutingError (uninitialized constant PackagesController):
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 >>>>>>> origin/master
 
 
@@ -1806,6 +1812,9 @@ ActionView::Template::Error (undefined method `phone_no' for #<User:0x007f09022a
   Rendered /home/ekuma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
   Rendered /home/ekuma/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (245.7ms)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
 Migrating to CreateAssignments (20151118111520)
@@ -3563,12 +3572,15 @@ Started GET "/assets/package.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-19 17:13:13 +0000
+<<<<<<< HEAD
+=======
 =======
 =======
 =======
 >>>>>>> origin/master
 >>>>>>> origin/master
 >>>>>>> origin/master
+<<<<<<< HEAD
 
 
 Started GET "/packages" for 127.0.0.1 at 2015-11-21 13:11:07 +0000
@@ -8642,3 +8654,6 @@ Started GET "/assets/package.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-11-22 11:38:41 +0000
+=======
+>>>>>>> origin/master
+>>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c

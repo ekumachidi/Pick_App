@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151118111520) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20151118104203) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20151118104203) do
+=======
+ActiveRecord::Schema.define(version: 20151118111520) do
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c
 
   create_table "admins", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +32,13 @@ ActiveRecord::Schema.define(version: 20151118111520) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c
   create_table "assignments", force: :cascade do |t|
     t.integer  "package_id"
     t.integer  "courier_id"
@@ -33,6 +52,11 @@ ActiveRecord::Schema.define(version: 20151118111520) do
   add_index "assignments", ["courier_id"], name: "index_assignments_on_courier_id"
   add_index "assignments", ["package_id"], name: "index_assignments_on_package_id"
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c
   create_table "couriers", force: :cascade do |t|
     t.string   "name"
     t.string   "location"

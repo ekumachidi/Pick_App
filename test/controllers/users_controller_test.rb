@@ -21,7 +21,11 @@ class UsersControllerTest < ActionController::TestCase
 <<<<<<< HEAD
       post :create, user: { address: @user.address, name: @user.name, phone: @user.phone }
 =======
+<<<<<<< HEAD
+      post :create, user: { address: @user.address, name: @user.name, phone: @user.phone }
+=======
       post :create, user: { address: @user.address, name: @user.name, phone_no: @user.phone_no }
+>>>>>>> origin/master
 >>>>>>> origin/master
     end
 
@@ -42,7 +46,11 @@ class UsersControllerTest < ActionController::TestCase
 <<<<<<< HEAD
     patch :update, id: @user, user: { address: @user.address, name: @user.name, phone: @user.phone }
 =======
+<<<<<<< HEAD
+    patch :update, id: @user, user: { address: @user.address, name: @user.name, phone: @user.phone }
+=======
     patch :update, id: @user, user: { address: @user.address, name: @user.name, phone_no: @user.phone_no }
+>>>>>>> origin/master
 >>>>>>> origin/master
     assert_redirected_to user_path(assigns(:user))
   end
