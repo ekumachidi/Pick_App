@@ -1,6 +1,6 @@
 <br><br><br><br>
 <h1>Package#show</h1>
-<%= link_to "mypage", current_user%><br>
+<%= link_to "mypage", user_path(@package.user_id) %><br>
 <%= @package.tracking_code %> <br> 
 <%= @package.weight_kg%> <br>
 <%= @package.vendor%> <br>

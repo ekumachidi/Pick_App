@@ -4,11 +4,11 @@ class AssignmentsController < ApplicationController
   end
 
   def create
-    @admin = Admin.find(3)
+    @user = User.find(1)
     package = Package.find(params[:package_id]) 
-  	@assignment = @admin.assignments.build(package_id: package.id)
+  	@assignment = @user.assignments.build(package_id: package.id)
       if @assignment.save
-        redirect_to assignments_path
+        redirect_to edit_assignment_path(@assignment.id)
       else
         render 'new'
       end
@@ -16,5 +16,9 @@ class AssignmentsController < ApplicationController
 
   def new
     @assignment = Assignment.new
+  end
+
+  def edit
+    @assignment = Assignment.find(params[:id])
   end
 end

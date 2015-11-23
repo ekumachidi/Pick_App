@@ -9,11 +9,10 @@ class PackagesController < ApplicationController
   def new
   @package = Package.new
   @user = User.find(params[:user_id])
-  
-  end
+    end
 
   def  create
-    @user = User.find(params[:user_id])
+    @user = current_user()
   	@package = @user.packages.build(package_params)
   	#@package.user_id = params[:user_id]
   	if @package.save

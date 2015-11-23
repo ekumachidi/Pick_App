@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     resources :packages
   end
 
-
+ 
   resources :packages
   resources :admins
 
