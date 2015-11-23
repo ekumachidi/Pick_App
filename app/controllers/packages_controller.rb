@@ -7,21 +7,23 @@ class PackagesController < ApplicationController
   end
 
   def new
+  @package = Package.new
   @user = User.find(params[:user_id])
-  	#@package = Package.new
+  
   end
 
-  def create
-  	@package = Package.new(package_param)
-  	# @package.user_id = User.find(params[:id])
+  def  create
+    @user = User.find(params[:user_id])
+  	@package = @user.packages.build(package_params)
   	#@package.user_id = params[:user_id]
   	if @package.save
-  		# redirect_to @package
-  		redirect_to packages_path #(@package.user_id)
+  		 redirect_to @package
+  		#@redirect_to packages_path (@package.user_id)
   	else
-  		redirect_to new_package_path #(@package.user_id)
+  		redirect_to new_packages_path (@package.user_id)
   	end
   end
+  
 
   def edit
   end
@@ -30,7 +32,7 @@ class PackagesController < ApplicationController
   end
 
   def update
-  	if @package.update(package_param)
+  	if @package.update(package_params)
   		redirect_to @package
   	else
   		render 'edit'
@@ -41,12 +43,12 @@ class PackagesController < ApplicationController
 
   end
 
-  private
-  	def package_param
-  		params.require(:packages).permit(:tracking_code, :weight_kg, :vendor, :location)
-  	end
+  
+  def package_params
+    params.require(:package).permit(:tracking_code, :weight_kg, :vendor, :location)
+  end
 
-  	def find_package
+ 	def find_package
   		@package = Package.find(params[:id])
-  	end
+  end
 end

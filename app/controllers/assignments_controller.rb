@@ -4,9 +4,9 @@ class AssignmentsController < ApplicationController
   end
 
   def create
-    @courier = Courier.find() #ourier whose location is  near  vendor location
-    package = Package.find_(params[:package_id]) 
-  	@assignment = @adim.assignments.build(package.id, @courier.id)
+    @admin = Admin.find(3)
+    package = Package.find(params[:package_id]) 
+  	@assignment = @admin.assignments.build(package_id: package.id)
       if @assignment.save
         redirect_to assignments_path
       else
@@ -15,5 +15,6 @@ class AssignmentsController < ApplicationController
   end
 
   def new
+    @assignment = Assignment.new
   end
 end

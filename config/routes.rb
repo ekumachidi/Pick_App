@@ -1,36 +1,25 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
 
-  get 'admins/index'
 
-  get 'admins/new'
+  # get 'admins/index'
 
-  get 'admins/show'
+  # get 'admins/new'
 
-  get 'admins/update'
+  # get 'admins/show'
 
-  get 'admins/destroy'
+  # get 'admins/update'
 
-  get 'admins/create'
+  # get 'admins/destroy'
 
-  get 'assignments/index'
+  # get 'admins/create'
 
-  get 'assignments/create'
+  # get 'assignments/index'
 
-  get 'assignments/new'
+  # get 'assignments/create'
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c
+  # get 'assignments/new'
+
+
   # get 'package/index'
 
   # get 'package/new'
@@ -41,38 +30,14 @@ Rails.application.routes.draw do
  resources :users do
     resources :packages
   end
-<<<<<<< HEAD
 
 
-  resources :admins
-=======
-=======
-<<<<<<< HEAD
-  resources :users do
-    resources :packages
-  end
-=======
-<<<<<<< HEAD
->>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c
-  resources :users
-
-  get 'package/index'
-
-  get 'package/new'
-
-  get 'package/edit'
-
-  get 'package/show'
-
-<<<<<<< HEAD
-  resources :assignments
-=======
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> 1aae02060a6f07311f34bb8d595de7e61a09b52c
-  resources :couriers
   resources :packages
+  resources :admins
+
+  
+  resources :assignments
+  resources :couriers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

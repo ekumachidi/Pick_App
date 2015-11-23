@@ -1,8 +1,11 @@
+
+<br><br><br><br>
 <p id="notice"><%= notice %></p>
 
+<p><%= link_to "add package",new_user_package_path(user_id: @user.id)%></p>
 <p>
   <strong>Name:</strong>
-  <%= @user.name %>
+  <%= @user.name %>   <%= link_to 'Edit Profile', edit_user_path(@user) %> 
 </p>
 
 <p>
@@ -11,27 +14,29 @@
 </p>
 
 <p>
-<<<<<<< HEAD
+
   <strong>Phone:</strong>
   <%= @user.phone %>
-=======
-<<<<<<< HEAD
+
   <strong>Phone:</strong>
   <%= @user.phone %>
-=======
+
   <strong>Phone no:</strong>
-  <%= @user.phone_no %>
->>>>>>> origin/master
->>>>>>> origin/master
+
+ 
 </p>
 
-<p><%= button_to "add package",new_package_path%></p>
-
+ <h2>My Packages</h2 >
+    <% x = 0%>
 <p> <%@user.packages.each do |package|%></p>
-    <%= package.trackin_code %><br>
-    <%= package.weight_kg %><br>
-    <%= package.trackin_code %><br>
-    <%= package.vendor %>  @ <%= package.location %>
+    
+    <%= x += 1 %>.  <%= package.tracking_code %>
+    <%= package.weight_kg %>
+    
+    <%= package.vendor %>  @ <%= package.location %> <br>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+   <%end%>
+
+
+
+
