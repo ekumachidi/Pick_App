@@ -2,40 +2,44 @@
 <br><br><br><br>
 <p id="notice"><%= notice %></p>
 
-<p><%= link_to "add package",new_user_package_path(user_id: @user.id)%></p>
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>   <%= link_to 'Edit Profile', edit_user_path(@user) %> 
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @user.address %>
-</p>
 
-<p>
-
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-
-  <strong>Phone no:</strong>
-
+  
+  
+<div class="container">
  
-</p>
+ <div class = "names" "col-lg-12" ><%= @user.name %></div>  
+   
+<div class="row"> 
+Adress:
+ <%= @user.address %></div>  
+ 
 
- <h2>My Packages</h2 >
+
+  Phone:
+  <%= @user.phone %>
+
+<div class="row">
+
+<%= link_to 'Edit Profile', edit_user_path(@user) %>  
+ <h3>My Packages</h3 >
     <% x = 0%>
-<p> <%@user.packages.each do |package|%></p>
+    <table>
+<p> <% @user.packages.each do |package|%></p>
+   <tr class = "<%= cycle('list_line_odd', 'list_line_even')%>">
+   <td>
+   <%= x += 1 %>  <%= package.tracking_code %></td>
+   <td><%= package.weight_kg %></td>
     
-    <%= x += 1 %>.  <%= package.tracking_code %>
-    <%= package.weight_kg %>
-    
-    <%= package.vendor %>  @ <%= package.location %> <br>
+   <td> 
+   <%= package.vendor %></div></td> <td> 
+    <%= package.location %>
+     <br></td> </tr>
 
    <%end%>
+   </div>
+   </table>
+   <p><%= link_to "add package",new_user_package_path(user_id: @user.id)%></p><br>
 
 
 

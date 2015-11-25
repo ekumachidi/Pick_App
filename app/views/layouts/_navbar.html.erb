@@ -17,15 +17,15 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <%= link_to "home", users_path %>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                       <%= link_to "Work with us", new_courier_path%>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <%= link_to 'contact', '/contact'%>
                     </li>
-                </ul>
+                </ul>   
             </div>
             <!-- /.navbar-collapse -->
         </div>

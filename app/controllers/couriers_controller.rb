@@ -23,7 +23,7 @@ class CouriersController < ApplicationController
 	end
 
 	def update
-		if @courier.update(courier_param)
+		if  @courier.update(courier_param)
 			redirect_to @courier
 		else
 			render 'edit'

@@ -4,7 +4,7 @@ class AssignmentsController < ApplicationController
   end
 
   def create
-    @user = User.find(1)
+    @user = current_user
     package = Package.find(params[:package_id]) 
   	@assignment = @user.assignments.build(package_id: package.id)
       if @assignment.save
@@ -21,4 +21,20 @@ class AssignmentsController < ApplicationController
   def edit
     @assignment = Assignment.find(params[:id])
   end
+
+  def update
+    @assignment = Assignment.find(params[:id])
+    if @assignment.save
+      redirect_to @assignment
+    else
+      render :edit
+      #delete that assignment
+    end
+  end
+
+  def show
+    @assignment = Assignment.find(params[:id])
+  end
+
 end
+

@@ -1,7 +1,9 @@
 <br><br><br><br>
-<h1>Select a courier</h1>
+
+<h2>select a courier</h2>
 <%= form_for @assignment do |f|%>
-<%= f.select :courier%>
+<%= f.select :courier_id, "dave" %>
+<%= f.submit "Assign" %>
 <%end%>
 
 <p>Find me in app/views/assignments/edit.html.erb</p>

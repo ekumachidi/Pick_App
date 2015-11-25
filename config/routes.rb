@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
+  root 'users#new'
+  get '/login' => 'session#new' 
+  get '/contact' => 'infos#contact'
+  post '/create' => 'session#create'
+ # resources :session
 
+  
+  #resources :session
   # get 'admins/index'
 
   # get 'admins/new'

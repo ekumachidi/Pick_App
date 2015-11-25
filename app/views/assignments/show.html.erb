@@ -1,2 +1,7 @@
 <br><br><br><br>
 Show assignment
+<%=@assignment.package_id%>
+<%=@assignment.package.vendor%>
+<%=@assignment.user_id%>
+<%=@assignment.package.id%>
+<%= link_to "see user", user_path(id: @assignment.user_id) %>

@@ -7,12 +7,12 @@ class PackagesController < ApplicationController
   end
 
   def new
-  @package = Package.new
-  @user = User.find(params[:user_id])
-    end
+    @package = Package.new
+    @user = User.find(params[:user_id])
+  end
 
   def  create
-    @user = current_user()
+    @user = current_user
   	@package = @user.packages.build(package_params)
   	#@package.user_id = params[:user_id]
   	if @package.save
@@ -48,6 +48,6 @@ class PackagesController < ApplicationController
   end
 
  	def find_package
-  		@package = Package.find(params[:id])
+  	@package = Package.find(params[:id])
   end
 end

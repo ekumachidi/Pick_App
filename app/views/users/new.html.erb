@@ -1,6 +1,58 @@
 <br><br><br><br>
 <h1>Sign up</h1>
 
-<%= render 'form' %>
+<table>
+<tr>
+  <td>
 
-<%= link_to 'Back', users_path %>
+  <%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %>:<br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :address %>:<br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+
+      <%= f.label :phone %>:<br>
+      <%= f.text_field :phone %>
+      <br>
+      <%= f.label :password %>:<br>
+      <%= f.password_field :password  %>
+
+    
+
+
+
+    <div class="actions">
+      <%= f.submit  "submit" %>
+
+      <%= link_to 'login','/login'%>
+    </div>
+    </div>
+  <% end %>
+  </td>
+  <td rowspan="2">
+  <h2><p class = "white"> Chillax, Your package will be at your doorstep</p></h2>
+  <div class="img"> <%= image_tag('pack.png') %>
+  </div>
+  </td>
+<tr>
+
+</table>
+
+
