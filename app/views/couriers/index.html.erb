@@ -1,0 +1,18 @@
+
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<br><br><br><br>
+This is Courier index page<br>
+<% @couriers.each do |c|%><br>
+<%= c.name%><br>
+<%= c.address%><br>
+<%= c.phone%><br>
+<% end %><br>
+
+<%= link_to 'create new courier', new_courier_path %>
+</body>
+</html>

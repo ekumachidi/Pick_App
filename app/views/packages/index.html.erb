@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<br><br><br><br>
+<h1>Packages index</h1>
+<% @packages.each do |t| %><br>
+<%= t.tracking_code %>
+<%= t.weight_kg%>
+<%= t.vendor%>
+<%= t.location%><br>
+<%= button_to "Assign", assignments_path(package_id: t)%>
+<% end %> <br>
+
+
+
+
+</body>
+</html>

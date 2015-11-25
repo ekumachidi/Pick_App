@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  package_id: 
+  courier_id: 
+  admin_id: 
+  status: false
+
+two:
+  package_id: 
+  courier_id: 
+  admin_id: 
+  status: false
