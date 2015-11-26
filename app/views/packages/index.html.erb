@@ -5,6 +5,7 @@
 </head>
 <body>
 <br><br><br><br>
+<<<<<<< HEAD
 <h2 class="header2">new packages</h2>
 <table>
  <tr>
@@ -38,6 +39,19 @@
 <%end%>
 <% end %> 
 <br>
+=======
+<h1>Packages index</h1>
+<% @packages.each do |t| %><br>
+<%= t.tracking_code %>
+<%= t.weight_kg%>
+<%= t.vendor%>
+<%= t.location%><br>
+<%= button_to "Assign", assignments_path(package_id: t)%>
+<% end %> <br>
+
+
+
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
 
 </body>
 </html>

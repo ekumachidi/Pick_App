@@ -38,8 +38,13 @@ class UsersController < ApplicationController
         # session[:id] = @user.id
         redirect_to @user
       else
+<<<<<<< HEAD
         render :new 
         
+=======
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }#
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
     end
   end
 

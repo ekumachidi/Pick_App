@@ -4,7 +4,11 @@ Show assignment
 <%=@assignment.package.vendor%>
 <%=@assignment.user_id%>
 <%=@assignment.package.id%>
+<<<<<<< HEAD
 <%=@assignment.package.assigned%>
 
 <%= link_to "see user", user_path(id: @assignment.user_id) %>
 <%= @assignment.package%>
+=======
+<%= link_to "see user", user_path(id: @assignment.user_id) %>
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f

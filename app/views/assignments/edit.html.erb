@@ -2,7 +2,11 @@
 
 <h2>select a courier</h2>
 <%= form_for @assignment do |f|%>
+<<<<<<< HEAD
 <%= f.collection_select :courier_id, @couriers, :id, :name, include_blank: true %>
+=======
+<%= f.select :courier_id, "dave" %>
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
 <%= f.submit "Assign" %>
 <%end%>
 

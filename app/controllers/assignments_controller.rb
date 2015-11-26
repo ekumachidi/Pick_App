@@ -19,14 +19,21 @@ class AssignmentsController < ApplicationController
   end
 
   def edit
+<<<<<<< HEAD
     @couriers = Courier.all
+=======
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
     @assignment = Assignment.find(params[:id])
   end
 
   def update
     @assignment = Assignment.find(params[:id])
+<<<<<<< HEAD
     if @assignment.update(courier_params)
        @assignment.package.update(assigned: true)
+=======
+    if @assignment.save
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
       redirect_to @assignment
     else
       render :edit
@@ -37,9 +44,12 @@ class AssignmentsController < ApplicationController
   def show
     @assignment = Assignment.find(params[:id])
   end
+<<<<<<< HEAD
    def courier_params
     params.require(:assignment).permit(:courier_id)
   end
+=======
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
 
 end
 

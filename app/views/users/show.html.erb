@@ -5,6 +5,7 @@
 
 
   
+<<<<<<< HEAD
   <table>
 <div class="container">
  
@@ -56,5 +57,44 @@
   </div>
   
  
+=======
+  
+<div class="container">
+ 
+ <div class = "names" "col-lg-12" ><%= @user.name %></div>  
+   
+<div class="row"> 
+Adress:
+ <%= @user.address %></div>  
+ 
+
+
+  Phone:
+  <%= @user.phone %>
+
+<div class="row">
+
+<%= link_to 'Edit Profile', edit_user_path(@user) %>  
+ <h3>My Packages</h3 >
+    <% x = 0%>
+    <table>
+<p> <% @user.packages.each do |package|%></p>
+   <tr class = "<%= cycle('list_line_odd', 'list_line_even')%>">
+   <td>
+   <%= x += 1 %>  <%= package.tracking_code %></td>
+   <td><%= package.weight_kg %></td>
+    
+   <td> 
+   <%= package.vendor %></div></td> <td> 
+    <%= package.location %>
+     <br></td> </tr>
+
+   <%end%>
+   </div>
+   </table>
+   <p><%= link_to "add package",new_user_package_path(user_id: @user.id)%></p><br>
+
+
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
 
 

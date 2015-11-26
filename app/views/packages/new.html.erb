@@ -1,4 +1,5 @@
 <br><br><br><br>
+<<<<<<< HEAD
 <div class="field">
 <h2 class="header2">Add new package</h2>
 <%= form_for @package do |t| %>
@@ -13,4 +14,14 @@
 		<div><%= t.submit 'create'%><br>
 	</div>
 </div>
+=======
+<h1>Add new package</h1>
+<%= form_for @package do |t| %>
+<%= t.text_field :tracking_code, placeholder: 'tracking code'%><br>
+<%= t.text_field :weight_kg, placeholder: 'weight'%><br>
+<%= t.text_field :vendor, placeholder: 'vendor'%><br>
+<%= t.text_field :location, placeholder: 'location'%> <br>
+<%= t.submit 'create'%><br>
+
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
 <% end %>

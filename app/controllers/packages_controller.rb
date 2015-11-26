@@ -7,7 +7,10 @@ class PackagesController < ApplicationController
   end
 
   def new
+<<<<<<< HEAD
     @vendors = ["a", "b", "c", "d"]
+=======
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
     @package = Package.new
     @user = User.find(params[:user_id])
   end

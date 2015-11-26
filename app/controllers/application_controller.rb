@@ -12,6 +12,9 @@ class ApplicationController < ActionController::Base
   # 	redirect_to login_path unless current_user
   # end
 
+<<<<<<< HEAD
   
 
+=======
+>>>>>>> 1515b4b68bf7311968a6a1c9a1197808656b9e5f
 end
