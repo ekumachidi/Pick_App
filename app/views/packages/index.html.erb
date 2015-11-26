@@ -5,19 +5,39 @@
 </head>
 <body>
 <br><br><br><br>
-<h2 class="header2">unassigned packages</h2>
+<h2 class="header2">new packages</h2>
+<table>
+ <tr>
+ 	<th>no:</th>
+ 	<th>tracking_code</th>
+ 	<th>weight</th>
+ 	<th>vendor</t	h>
+ 	<th>location</th>
+ 	<th>destination</th>
+     <th>recipient</th>
+ </th>
+<% x = 0%>
 <% @packages.each do |t| %><br>
 <% if t.assigned != true%>
-<%= t.tracking_code %>
-<%= t.weight_kg%>
-<%= t.vendor%>
-<%= t.location%><br>
-<%= button_to "Assign", assignments_path(package_id: t)%>
+<tr>
+<td><%= x += 1%>.</td>
+
+<div class>
+<td>
+<%= t.tracking_code%></td>
+<td><%= t.weight_kg%></td>
+<td><%= t.vendor%></td>
+<td><%= t.location%></td>
+<td><%= t.destination %></td>
+<td><%= t.recipient %></td>
+
+</div>
+</table>
+<div class="right"><%= button_to "Assign", assignments_path(package_id: t)%></div>
+</tr>
 <%end%>
-<% end %> <br>
-
-
-
+<% end %> 
+<br>
 
 </body>
 </html>
