@@ -1,0 +1,460 @@
+  [1m[36m (136.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (122.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151115191512)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151115191512"]]
+  [1m[35m (128.6ms)[0m  commit transaction
+Migrating to CreatePackages (20151115191639)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "packages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tracking_code" varchar NOT NULL, "weight_kg" integer, "user_id" integer NOT NULL, "vendor" varchar NOT NULL, "location" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_packages_on_user_id" ON "packages" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115191639"]]
+  [1m[36m (103.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20151115205813)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205813"]]
+  [1m[36m (97.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCouriers (20151115205954)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "couriers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205954"]]
+  [1m[36m (108.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePayments (20151118104203)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "payments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118104203"]]
+  [1m[36m (108.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAssignments (20151118111520)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "package_id" integer, "courier_id" integer, "user_id" integer, "status" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_package_id" ON "assignments" ("package_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_courier_id" ON "assignments" ("courier_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_assignments_on_user_id" ON "assignments" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118111520"]]
+  [1m[36m (105.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddPasswordToUsers (20151124183459)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151124183459"]]
+  [1m[36m (97.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:35:44', '2015-11-25 11:35:44', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:35:44', '2015-11-25 11:35:44', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:35:44', '2015-11-25 11:35:44', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:35:44', '2015-11-25 11:35:44', 980190962)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:37:36', '2015-11-25 11:37:36', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:37:36', '2015-11-25 11:37:36', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:37:36', '2015-11-25 11:37:36', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:37:36', '2015-11-25 11:37:36', 980190962)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:46:30', '2015-11-25 11:46:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:46:30', '2015-11-25 11:46:30', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:46:30', '2015-11-25 11:46:30', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:46:30', '2015-11-25 11:46:30', 980190962)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:46:56', '2015-11-25 11:46:56', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:46:56', '2015-11-25 11:46:56', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:46:56', '2015-11-25 11:46:56', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:46:56', '2015-11-25 11:46:56', 980190962)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:48:59', '2015-11-25 11:48:59', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:48:59', '2015-11-25 11:48:59', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:48:59', '2015-11-25 11:48:59', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:48:59', '2015-11-25 11:48:59', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (138.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (98.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151115191512)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151115191512"]]
+  [1m[35m (102.4ms)[0m  commit transaction
+Migrating to CreatePackages (20151115191639)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "packages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tracking_code" varchar NOT NULL, "weight_kg" integer, "user_id" integer NOT NULL, "vendor" varchar NOT NULL, "location" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_packages_on_user_id" ON "packages" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115191639"]]
+  [1m[36m (103.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20151115205813)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205813"]]
+  [1m[36m (97.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCouriers (20151115205954)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "couriers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205954"]]
+  [1m[36m (97.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePayments (20151118104203)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "payments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118104203"]]
+  [1m[36m (119.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAssignments (20151118111520)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "package_id" integer, "courier_id" integer, "user_id" integer, "status" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_assignments_on_package_id" ON "assignments" ("package_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_courier_id" ON "assignments" ("courier_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_assignments_on_user_id" ON "assignments" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118111520"]]
+  [1m[36m (115.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddPasswordToUsers (20151124183459)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151124183459"]]
+  [1m[36m (108.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:53:47', '2015-11-25 11:53:47', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:53:47', '2015-11-25 11:53:47', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:53:47', '2015-11-25 11:53:47', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:53:47', '2015-11-25 11:53:47', 980190962)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (137.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (99.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151115191512)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151115191512"]]
+  [1m[35m (114.5ms)[0m  commit transaction
+Migrating to CreatePackages (20151115191639)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "packages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tracking_code" varchar NOT NULL, "weight_kg" integer, "user_id" integer NOT NULL, "vendor" varchar NOT NULL, "location" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_packages_on_user_id" ON "packages" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115191639"]]
+  [1m[36m (126.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAdmins (20151115205813)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205813"]]
+  [1m[36m (130.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCouriers (20151115205954)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "couriers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205954"]]
+  [1m[36m (130.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePayments (20151118104203)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "payments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118104203"]]
+  [1m[36m (108.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAssignments (20151118111520)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "package_id" integer, "courier_id" integer, "user_id" integer, "status" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_package_id" ON "assignments" ("package_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_courier_id" ON "assignments" ("courier_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_assignments_on_user_id" ON "assignments" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118111520"]]
+  [1m[36m (94.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddPasswordToUsers (20151124183459)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151124183459"]]
+  [1m[36m (96.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:56:15', '2015-11-25 11:56:15', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2015-11-25 11:56:15', '2015-11-25 11:56:15', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "assignments"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:56:15', '2015-11-25 11:56:15', 980190962)[0m
+SQLite3::SQLException: table assignments has no column named admin_id: INSERT INTO "assignments" ("package_id", "courier_id", "admin_id", "status", "created_at", "updated_at", "id") VALUES (NULL, NULL, NULL, 'f', '2015-11-25 11:56:15', '2015-11-25 11:56:15', 980190962)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (131.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (99.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20151115191512)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151115191512"]]
+  [1m[35m (98.8ms)[0m  commit transaction
+Migrating to CreatePackages (20151115191639)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "packages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tracking_code" varchar NOT NULL, "weight_kg" integer, "user_id" integer NOT NULL, "vendor" varchar NOT NULL, "location" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_packages_on_user_id" ON "packages" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115191639"]]
+  [1m[36m (126.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCouriers (20151115205954)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "couriers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151115205954"]]
+  [1m[36m (130.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePayments (20151118104203)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "payments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118104203"]]
+  [1m[36m (130.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAssignments (20151118111520)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "package_id" integer, "courier_id" integer, "user_id" integer, "status" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_package_id" ON "assignments" ("package_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_assignments_on_courier_id" ON "assignments" ("courier_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_assignments_on_user_id" ON "assignments" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151118111520"]]
+  [1m[36m (173.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddPasswordToUsers (20151124183459)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151124183459"]]
+  [1m[36m (153.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_courier_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_assignments_on_package_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_packages_on_user_id' AND type='index'
+

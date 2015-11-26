@@ -19,12 +19,14 @@ class AssignmentsController < ApplicationController
   end
 
   def edit
+    @couriers = Courier.all
     @assignment = Assignment.find(params[:id])
   end
 
   def update
     @assignment = Assignment.find(params[:id])
-    if @assignment.save
+    if @assignment.update(courier_params)
+       @assignment.package.update(assigned: true)
       redirect_to @assignment
     else
       render :edit
@@ -34,6 +36,9 @@ class AssignmentsController < ApplicationController
 
   def show
     @assignment = Assignment.find(params[:id])
+  end
+   def courier_params
+    params.require(:assignment).permit(:courier_id)
   end
 
 end

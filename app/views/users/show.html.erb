@@ -5,42 +5,53 @@
 
 
   
-  
+  <table>
 <div class="container">
  
- <div class = "names" "col-lg-12" ><%= @user.name %></div>  
-   
-<div class="row"> 
-Adress:
- <%= @user.address %></div>  
+ <div class="row">
+ <div class= "col-lg-6">
+ <h1 class = "header2">
+ <%= @user.name %> </h1> 
+<br>
+<h2><div class="white">address:               <%= @user.address %> </div></h2>
  
 
 
-  Phone:
-  <%= @user.phone %>
+  <h2><div class="white"> phone:               <%= @user.phone %> </div></h2>
 
 <div class="row">
 
 <%= link_to 'Edit Profile', edit_user_path(@user) %>  
- <h3>My Packages</h3 >
-    <% x = 0%>
-    <table>
+</div>
+</div>
+<div class="row">
+<div class = "col-lg-6">
+
+<div class="col-lg-12"> <h3>My Packages</h3 >     <% x = 0%></div>
+
+   
 <p> <% @user.packages.each do |package|%></p>
-   <tr class = "<%= cycle('list_line_odd', 'list_line_even')%>">
-   <td>
-   <%= x += 1 %>  <%= package.tracking_code %></td>
-   <td><%= package.weight_kg %></td>
+    <% if package.status != true%>
+  
+
+  <div class="col-lg-3">   <%= package.tracking_code %></div>
+  <div class="col-lg-1"> <%= package.weight_kg %></div>
     
-   <td> 
-   <%= package.vendor %></div></td> <td> 
-    <%= package.location %>
-     <br></td> </tr>
+  <div class="col-lg-1"> <%= package.vendor %></div>
+  <div class="col-lg-1">  <%= package.location %></div> 
+  <div class="col-lg-1">  <%= package.destination%></div> 
+  <div class="col-lg-1">  <%= package.due_at %></div> 
+    
 
-   <%end%>
-   </div>
-   </table>
-   <p><%= link_to "add package",new_user_package_path(user_id: @user.id)%></p><br>
-
-
+     <%end%>
+   <%end%><br>
+   <br>
+   
+   
+   <br><p><%= link_to "add package",new_user_package_path(user_id: @user.id)%></p><br>
+  </div>
+  </div>
+  
+ 
 
 

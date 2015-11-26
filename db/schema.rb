@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124183459) do
-
-  create_table "admins", force: :cascade do |t|
-    t.string   "name"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20151125230157) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer  "package_id"
@@ -37,8 +30,10 @@ ActiveRecord::Schema.define(version: 20151124183459) do
     t.string   "name"
     t.string   "location"
     t.string   "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "email_address"
+    t.string   "password_digest"
   end
 
   create_table "packages", force: :cascade do |t|
@@ -49,6 +44,11 @@ ActiveRecord::Schema.define(version: 20151124183459) do
     t.string   "location",      null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "destination"
+    t.string   "recipient"
+    t.time     "due_at"
+    t.boolean  "assigned"
+    t.boolean  "status"
   end
 
   add_index "packages", ["user_id"], name: "index_packages_on_user_id"

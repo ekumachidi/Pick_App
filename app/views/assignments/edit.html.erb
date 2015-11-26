@@ -2,7 +2,7 @@
 
 <h2>select a courier</h2>
 <%= form_for @assignment do |f|%>
-<%= f.select :courier_id, "dave" %>
+<%= f.collection_select :courier_id, @couriers, :id, :name, include_blank: true %>
 <%= f.submit "Assign" %>
 <%end%>
 
